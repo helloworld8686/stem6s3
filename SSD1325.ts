@@ -36,18 +36,18 @@ namespace OLED {
      * draws a line
      */
     //% blockId=drawChar
-    //% block="draw char OLED with coordinates |x轴 %x|y轴 %y| %size| 显示内容: %text"
+    //% block="Oled显示字符 |x轴 %x|y轴 %y| %size| 显示内容: %text"
     //% shim=OLED::drawChar
-    export function drawChar(x:number,y:number,size:FrontSize, text: string): void {
+    function drawChar(x:number,y:number,size:FrontSize, text: string): void {
         return;
     }
 
 
     /**
-     * draws a line
+     * draws a string
      */
     //% blockId=drawString
-    //% block="draw char OLED with coordinates |x轴 %x|y轴 %y| %size| 显示内容: %text"
+    //% block="Oled显示字符串 |x轴 %x|y轴 %y| 字体大小: %size | 显示数字: %text"
      //% shim=OLED::drawString
     //% x.min=0 x.max=127 x.defl=0
     //% y.min=0 y.max=63 y.defl=0   
@@ -55,24 +55,26 @@ namespace OLED {
         return;
     }
     /**
-     * draws a line
+     * draws a big size of number
      */
     //% blockId=drawNumber32X16
-    //% block="draw char OLED with coordinates |x轴 %x|y轴 %y| %size| 显示内容: %data"
+    //% block="Oled显示大字体数字 |x轴 %x|y轴 %y| 用0补齐 %xZero 的位数| 显示内容: %data"
      //% shim=OLED::drawNumber32X16
     //% x.min=0 x.max=127 x.defl=0
     //% y.min=0 y.max=63 y.defl=0   
+    //% xZero.min = 0 xZero.max=9 xZero.defl=0 
     export function drawNumber32X16(x: number, y: number, xZero :number,data: number): void {
         return;
     }
     /**
-     * draws a line
+     * draws a number
      */
     //% blockId=drawNumber16X8
-    //% block="draw char OLED with coordinates |x轴 %x|y轴 %y| %size| 显示内容: %data"
+    //% block="Oled显示小字体数字|x轴 %x|y轴 %y| 用0补齐 %xZero 的位数| 显示数字: %data"
      //% shim=OLED::drawNumber16X8
     //% x.min=0 x.max=127 x.defl=0
     //% y.min=0 y.max=63 y.defl=0   
+    //% xZero.min = 0 xZero.max=9 xZero.defl=0  
     export function drawNumber16X8(x: number, y: number, xZero :number,data: number): void {
         return;
     }
