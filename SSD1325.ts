@@ -58,7 +58,7 @@ namespace OLED {
      * draws a big size of number
      */
     //% blockId=drawNumber32X16
-    //% block="Oled显示大字体数字 |x轴 %x|y轴 %y| 用0补齐 %xZero 的位数| 显示内容: %data"
+    //% block="Oled显示大字体数字 |x轴 %x|y轴 %y| 用0补齐的位数: %xZero| 显示数字: %data"
      //% shim=OLED::drawNumber32X16
     //% x.min=0 x.max=127 x.defl=0
     //% y.min=0 y.max=63 y.defl=0   
@@ -70,12 +70,46 @@ namespace OLED {
      * draws a number
      */
     //% blockId=drawNumber16X8
-    //% block="Oled显示小字体数字|x轴 %x|y轴 %y| 用0补齐 %xZero 的位数| 显示数字: %data"
+    //% block="Oled显示小字体数字|x轴 %x|y轴 %y| 用0补齐的位数: %xZero| 显示数字: %data"
      //% shim=OLED::drawNumber16X8
     //% x.min=0 x.max=127 x.defl=0
     //% y.min=0 y.max=63 y.defl=0   
     //% xZero.min = 0 xZero.max=9 xZero.defl=0  
     export function drawNumber16X8(x: number, y: number, xZero :number,data: number): void {
         return;
+    }
+    /**
+     * Char width
+     */
+    //% blockId=CharWidth
+    //% block="字符的宽度"
+
+    export function CharWidth(size: FrontSize): number {
+        if (size == FrontSize.Size32X32)
+        {
+            return 16;
+        }   
+        else
+        {
+            return 8;
+        }  
+    }
+
+
+    /**
+     * Char Height
+     */
+    //% blockId=CharHeight
+    //% block="字符的高度"
+
+    export function CharHeight(size: FrontSize): number {
+        if (size == FrontSize.Size32X32)
+        {
+            return 32;
+        }   
+        else
+        {
+            return 16;
+        }    
     }
 }
