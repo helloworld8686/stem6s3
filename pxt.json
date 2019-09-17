@@ -1,0 +1,25 @@
+{
+    "name": "stem6s3",
+    "version": "0.0.0",
+    "description": "oled and mp3",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "SSD1325.ts",
+        "SSD1325_OLED.cpp",
+        "Adafruit_SSD1325.h",
+        "Adafruit_SSD1325.cpp",
+        "glcdfont.h",
+        "glcdfont.c",
+        "typeDef.h",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "license": "MIT"
+}
