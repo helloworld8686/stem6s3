@@ -47,7 +47,7 @@ namespace OLED {
      * draws a string
      */
     //% blockId=drawString
-    //% block="Oled显示字符串 |x轴 %x|y轴 %y| 字体大小: %size | 显示数字: %text"
+    //% block="Oled显示字符串 |x轴 %x|y轴 %y| 字体大小: %size | 显示字符串: %text"
      //% shim=OLED::drawString
     //% x.min=0 x.max=127 x.defl=0
     //% y.min=0 y.max=63 y.defl=0   
@@ -82,7 +82,7 @@ namespace OLED {
      * Char width
      */
     //% blockId=CharWidth
-    //% block="字符的宽度"
+    //% block="%size 字符的宽度"
 
     export function CharWidth(size: FrontSize): number {
         if (size == FrontSize.Size32X32)
@@ -100,7 +100,7 @@ namespace OLED {
      * Char Height
      */
     //% blockId=CharHeight
-    //% block="字符的高度"
+    //% block="%size 字符的高度 "
 
     export function CharHeight(size: FrontSize): number {
         if (size == FrontSize.Size32X32)
