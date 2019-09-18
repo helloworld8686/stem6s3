@@ -121,9 +121,6 @@ All text above, and the splash screen must be included in any redistribution
 class Adafruit_SSD1325{
  public:
 
-  Adafruit_SSD1325(void)
-  {
-  };
   void begin(void);
   void command(uint8_t c);
   void data(uint8_t c);
