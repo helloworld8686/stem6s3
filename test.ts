@@ -1,15 +1,21 @@
 let Hour = 0
 let Minute = 0
 let second = 0
+let year = 2019
+let month = 1
+let day = 1
+
 let x = 0
 let x_width = 16
 let x_Flash1 = 0
 let x_Flash2 = 0
 OLED.init()
-OLED.drawString(0, 32, FrontSize.Size16X16, "~`!@#$%^&*()_+-={}[]\|;:'\"<>,.?/")
+
+OLED.drawString(48, 32, FrontSize.Size16X16, "2019-09-17")
+OLED.drawString(48, 48, FrontSize.Size16X16, "Tue  Sunny")
 
 basic.forever(function () {
-    x = 0
+    x = 16
     OLED.drawNumber32X16(x, 0, 2, Hour)
     x = x + 2 * x_width
     x_Flash1 = x
