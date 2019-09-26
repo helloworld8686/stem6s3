@@ -5,6 +5,16 @@ const enum FrontSize {
     Size32X32 = 1,
 }
 
+
+const enum OledIcon{
+    //% block="播放"
+    play = 0,
+    //% block="暂停"
+    pause = 1,
+    //% block="下一首"
+    next = 2,
+}
+
 //% color=#27b0ba weight=100 icon="\uf26c"
 namespace OLED {
 
@@ -78,6 +88,19 @@ namespace OLED {
     export function drawNumber16X8(x: number, y: number, xZero :number,data: number): void {
         return;
     }
+
+
+
+    /**
+     * draws a number
+     */
+    //% blockId=drawIcon
+    //% block="Oled显示图标|x轴 %x|y轴 %y| 选择图标: %icon"
+    //% shim=OLED::drawIcon 
+    export function drawIcon(x: number, y: number, icon :OledIcon): void {
+        return;
+    }
+
     /**
      * Char width
      */

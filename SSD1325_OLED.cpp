@@ -25,6 +25,11 @@ namespace OLED {
 		oled->drawChar(x0, y0, text->ascii.data[0]- 0x20, 15, 0,size);
 	}
 	//%
+	void drawIcon(int x0, int y0, int icon){
+		oled->drawIcon(x0, y0, icon);
+	}
+
+	//%
 	void drawString(int x0, int y0, int size, String text){
 		int x;
 		int y;
@@ -165,6 +170,14 @@ namespace OLED {
 			}
 		}
 	}
+
+
+
+
+
+
+
+
 #if 0 
 	//%
     void showStringNoNewLine(String text) {

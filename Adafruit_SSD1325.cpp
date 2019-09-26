@@ -239,6 +239,48 @@ void Adafruit_SSD1325::drawChar(int16_t t_x, int16_t t_y, unsigned char c, int c
 
 
 
+void Adafruit_SSD1325::drawIcon(int16_t t_x, int16_t t_y, int32_t icon)
+{
+  int16_t Front_LCDWIDTH;
+  int16_t Front_LCDHEIGHT;
+  uint8_t data;
+
+  Front_LCDWIDTH = 8;
+  Front_LCDHEIGHT = 16;
+  
+
+  command(0x15); /* set column address */
+  command(t_x/2); /* set column start address */
+  command((t_x + Front_LCDWIDTH)/2-1); /* set column end address */
+  command(0x75); /* set row address */
+  command(t_y); /* set row start address */
+  command(t_y + Front_LCDHEIGHT-1); /* set row end address */
+  OLED_CS = 1;
+  OLED_DC = 1;
+  OLED_CS = 0;
+  Delay_us(10);
+  for (uint16_t x=0; x<Front_LCDHEIGHT; x++) {
+    for (uint16_t y=0; y<Front_LCDWIDTH; y += 8) { // we write 8 pixels at once
+
+      data = icon_1608[icon][(x * Front_LCDWIDTH + y) / 8];
+       
+      for (uint8_t p=0; p<8; p+=2) {
+        uint8_t d = 0;
+        if (data & (0x80 >> p)) {
+          d |= 0xF0;
+        }
+                  
+        if (data & (0x80 >> (p+1))) 
+        {
+          d |= 0x0F;
+        }
+ 
+        spixfer(d);
+      }
+    }
+  } 
+  OLED_CS = 1;
+}
 
 
 
@@ -360,14 +402,18 @@ void Adafruit_SSD1325::spixfer(uint8_t x) {
 
 void Adafruit_SSD1325::Delay_us(int xus)
 {
+
+//  wait_us(xus);
+
+  /*  
   int us_cnt = 0;
   for(int m = 0; m < xus; m++) 
   { 
-    for(int k = 0; k < 50; k++)
+     for(int k = 0; k < 5; k++)
     {
       us_cnt = us_cnt + 1;
     }    
-  }	
+  }	*/
 }
 
 

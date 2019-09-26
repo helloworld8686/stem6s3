@@ -15,10 +15,15 @@
         "glcdfont.h",
         "glcdfont.c",
         "typeDef.h",
+        "mp3.ts",
+        "namespace.ts",
+        "serial_user.cpp",
+        "infrared.ts",
+        "shims.d.ts",
         "enums.d.ts"
     ],
     "testFiles": [
-        "test.ts"
+        "main.ts"
     ],
     "public": true,
     "license": "MIT"

@@ -27,6 +27,8 @@ All text above, and the splash screen must be included in any redistribution
 #if 1
 
 extern const unsigned char font[];
+
+extern const unsigned char icon_1608[2][16];
 extern const unsigned char asc2_1608[95][16];
 
 extern const unsigned char asc2_3216[95][64];

@@ -131,7 +131,7 @@ class Adafruit_SSD1325{
   void display();
 
   void drawChar(int16_t t_x, int16_t t_y, unsigned char c, int color, int bg, int size);
-
+  void drawIcon(int16_t t_x, int16_t t_y, int32_t icon);
   void drawPixel(int16_t x, int16_t y, uint16_t color);
   void shiftDisplay(int16_t dx, int16_t dy);
 
