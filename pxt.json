@@ -1,6 +1,6 @@
 {
     "name": "stem6s3",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "oled and mp3",
     "dependencies": {
         "core": "*",
