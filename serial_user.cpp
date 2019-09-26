@@ -1,13 +1,7 @@
 #include "pxt.h"
-//% weight=2 color=#002050 icon="\uf287"
-//% advanced=true
-namespace serial{
-    /**
-        * Read the buffered received data as uint8_t
-        */
-    //% help=serial/read-string
-    //% blockId=serial_read_uint8_t
-    //% weight=18
+
+namespace serial_user{
+    //%
     Buffer Read()
     {
         unsigned int data[0];
