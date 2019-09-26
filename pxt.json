@@ -18,7 +18,6 @@
         "mp3.ts",
         "namespace.ts",
         "serial_user.cpp",
-        "serial_user.ts",
         "infrared.ts",
         "shims.d.ts",
         "enums.d.ts"
