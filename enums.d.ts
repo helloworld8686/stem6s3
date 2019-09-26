@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-declare namespace serial_user {
+declare namespace makerbit {
 }
 
 // Auto-generated. Do not edit. Really.

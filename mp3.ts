@@ -425,12 +425,12 @@ namespace makerbit {
   //  deviceState.TrackShortNameGet = false
     while (true)
     {
-      if (serial_user.Read().length == 0)
+      if (makerbit.Read().length == 0)
         break
     }  
     sendCommand(YX5300.queryTrackName());
 
-    let dat = serial_user.Read()
+    let dat = makerbit.Read()
     if (dat.length > 0)
     {
       if  ((dat.getNumber(NumberFormat.UInt8LE, 0) == 0xAA) && (dat.getNumber(NumberFormat.UInt8LE, 1) == CommandCode.QUERY_TRACK_SHORT_NAME)) 
