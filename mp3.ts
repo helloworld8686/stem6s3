@@ -509,7 +509,7 @@ namespace makerbit {
     return deviceState.playMode
   }  
 
-  //% weight=18 shim=makerbit::Read
+  //%shim=makerbit::Read
   export function Read() :Buffer{
     return null
   }
