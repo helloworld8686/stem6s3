@@ -1,8 +1,7 @@
 
 namespace makerbit {
-    //% blockId=Read
-    //%shim=makerbit::Read
-    function Read(): Buffer {
+    //% shim=makerbit::Read
+    export function Read():Buffer{
         return null
     }
 }    
