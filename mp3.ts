@@ -425,12 +425,12 @@ namespace makerbit {
   //  deviceState.TrackShortNameGet = false
     while (true)
     {
-      if (Read().length == 0)
+      if (makerbit.Read().length == 0)
         break
     }  
     sendCommand(YX5300.queryTrackName());
 
-    let dat = Read()
+    let dat = makerbit.Read()
     if (dat.length > 0)
     {
       if  ((dat.getNumber(NumberFormat.UInt8LE, 0) == 0xAA) && (dat.getNumber(NumberFormat.UInt8LE, 1) == CommandCode.QUERY_TRACK_SHORT_NAME)) 
@@ -509,10 +509,7 @@ namespace makerbit {
     return deviceState.playMode
   }  
 
-  //%shim=makerbit::Read
-  function Read() :Buffer{
-    return null
-  }
+
   // YX5300 asynchronous serial port control commands
   export namespace YX5300 {
     export interface Response {
