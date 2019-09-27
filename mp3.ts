@@ -510,7 +510,7 @@ namespace makerbit {
   }  
 
   //%shim=makerbit::Read
-  export function Read() :Buffer{
+  function Read() :Buffer{
     return null
   }
   // YX5300 asynchronous serial port control commands
