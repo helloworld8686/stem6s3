@@ -1,6 +1,6 @@
 #include "pxt.h"
 
-namespace makerbit{
+namespace serial_user{
     //%
     Buffer Read()
     {
