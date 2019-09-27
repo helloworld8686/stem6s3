@@ -1,7 +1,7 @@
 
 namespace makerbit {
     //%shim=makerbit::Read
-    export function Read(): Buffer {
+    function Read(): Buffer {
         return null
     }
 }    
