@@ -40,6 +40,7 @@ let irNumber1 = 0
 let irNumber2 = 0
 let status = 0
 let playmode = Mp3PLAYMODE.SINGLE_ONCE
+
 OLED.init()
 makerbit.connectSerialMp3(DigitalPin.P8, DigitalPin.P12)
 makerbit.setMp3Volume(10)
