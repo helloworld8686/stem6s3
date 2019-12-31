@@ -21,7 +21,9 @@
         "serial_user.ts",
         "infrared.ts",
         "shims.d.ts",
+        "pwm.ts",
         "enums.d.ts"
+
     ],
     "testFiles": [
         "main.ts"

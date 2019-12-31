@@ -21,6 +21,7 @@ makerbit.setMp3Mode(Mp3PLAYMODE.ALL_REPEAT)
 basic.pause(200)
 makerbit.playMp3Track("DONG", "003")
 makerbit.connectInfrared(DigitalPin.P5)
+makerbit.setRGB(ColorList.white)
 OLED.drawString(
 56,
 32,
